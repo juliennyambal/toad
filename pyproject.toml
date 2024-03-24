@@ -46,7 +46,7 @@ exclude = ["tests"]
 [tool.cibuildwheel]
 skip = ["pp*", "*-manylinux_i686", "*-musllinux_*"]
 before-all = "uname -a"
-before-build = "python setup.py build_ext --inplace"
+before-build = "pipx run build --sdist"
 
 [project.urls]
 Homepage = "https://github.com/amphibian-dev/toad"
