@@ -44,6 +44,7 @@ toad = "toad.cli:main"
 exclude = ["tests"]
 
 [tool.cibuildwheel]
+skip = "pp*"
 before-all = "uname -a"
 
 [project.urls]
