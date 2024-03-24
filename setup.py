@@ -46,35 +46,10 @@ def get_requirements(stage = None):
 
 
 setup(
-    name = NAME,
-    version = get_version(),
-    description = 'Toad is dedicated to facilitating model development process, especially for a scorecard.',
-    long_description = open('README.md', encoding = 'utf-8').read(),
-    long_description_content_type = 'text/markdown',
-    url = 'https://github.com/amphibian-dev/toad',
-    author = 'ESC Team',
-    author_email = 'secbone@gmail.com',
-    packages = find_packages(exclude = ['tests']),
     include_dirs = [np.get_include()],
     ext_modules = get_ext_modules(),
     include_package_data = True,
-    python_requires = '>=3.7',
+    python_requires = '>=3.8',
     setup_requires = ['numpy'],
     tests_require = get_requirements('test'),
-    license = 'MIT',
-    classifiers = [
-        'Operating System :: POSIX',
-        'Operating System :: Microsoft :: Windows',
-        'Operating System :: MacOS :: MacOS X',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: 3.11',
-        'Programming Language :: Python :: 3.12',
-    ],
-    entry_points = {
-        'console_scripts': [
-            'toad = toad.cli:main',
-        ],
-    },
 )

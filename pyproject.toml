@@ -1,7 +1,7 @@
 [project]
 name = "toad"
 description = "Toad is dedicated to facilitating model development process, especially for a scorecard."
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 license = {file = "LICENSE"}
 authors = [{name = "Secbone", email = "secbone@gmail.com"}]
 classifiers = [
@@ -42,6 +42,9 @@ toad = "toad.cli:main"
 
 [tool.setuptools.packages.find]
 exclude = ["tests"]
+
+[tool.cibuildwheel]
+before-all = "uname -a"
 
 [project.urls]
 Homepage = "https://github.com/amphibian-dev/toad"
