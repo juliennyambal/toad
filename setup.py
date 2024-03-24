@@ -52,4 +52,9 @@ setup(
     python_requires = '>=3.8',
     setup_requires = ['numpy'],
     tests_require = get_requirements('test'),
+    entry_points = {
+        'console_scripts': [
+            'toad = toad.cli:main',
+        ],
+    },
 )
